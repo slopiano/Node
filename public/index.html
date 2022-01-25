@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <p><a href="https://github.com/slopiano">GitHub</a> &emsp;
+      <a href="https://www.linkedin.com/in/sebastian-lopiano/">LinkedIn</a>
+      &emsp; 
+    <a href="resume.html">Resume</a></p>
+    <h2>Expense Tracker</h2>
+
+    <div class="container">
+      <h4>Your Balance</h4>
+      <h1 class="balance"></h1>
+
+      <div class="inc-exp-container">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus" class="money plus"></p>
+        </div>
+        <div>
+          <h4>Expense</h4>
+          <p id="money-minus" class="money minus"></p>
+        </div>
+      </div>
+
+      <h3>History</h3>
+      <div class="data">
+        <!-- <li class="minus">
+          Cash <span>-$400</span><button class="delete-btn">x</button>
+        </li> -->
+      </div>
+
+      <h3>Add new transaction</h3>
+      <form id="form">
+        <div class="form-control">
+          <label for="description">Description</label>
+          <input type="text" id="text" placeholder="Enter description..." />
+        </div>
+        <div class="form-control">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" min="0" step=".01" placeholder="Enter amount..." />
+        </div>
+        <div class="form-control">
+            <label for="income">Check if spent</label>
+            <input type="checkbox" id="income"/>
+        </div>
+        <div class="form-control">
+            <label for="type">Type of transaction: </label>
+            <select id="type" name="typelist" form="typeform">
+                <option value="food">Food</option>
+                <option value="transportation">Transportation</option>
+                <option value="rent">Rent</option>
+                <option value="fun">Fun</option>
+                <option value="spouse">Spouse</option>
+                <option value="income">Income</option>
+            </select>
+        </div>
+        <button type="submit" class="btn">Add transaction</button>
+      </form>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./home.js"></script>
+  </body>
+</html>
